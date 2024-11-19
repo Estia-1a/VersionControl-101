@@ -1,0 +1,39 @@
+project:
+  type: book
+
+book:
+  title: "SGV 101"
+  author: "Dimitri Masson"
+  date: "14/11/2024"
+  chapters:
+    - part: "Introduction"
+      chapters:
+        - index.qmd
+        - evaluation.qmd
+    - part: "Setting Up"
+      chapters: 
+        - activities/class_1/Git_Clients.qmd
+        - activities/class_1/Github_Account_Creation.qmd
+    - part: "Activity"
+      chapters: 
+        - activities/Single-User-Project.qmd
+    - part: "Project"
+      chapters: 
+        - activities/Multi-User-Projet.md
+
+website:
+  title: "wiki"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+
+

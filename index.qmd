@@ -1,0 +1,14 @@
+---
+title: "Version Control 101"
+listing: 
+  contents: activities/**/*.(qmd|md)
+---
+# Welcome to the Version Control 101
+You will find here all the information relative to the class *Systèmes de Gestion de Version*
+
+You can use the issues système to ask questions 
+## The class
+
+## The Evaluation
+Les lapins crétins disent bwaaah!
+

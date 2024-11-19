@@ -1,0 +1,17 @@
+
+### GitHub account creation
+
+_Note_: If you already have a personal GitHub account you can use it, you can link it with your Estia address to get the [benefits](https://education.github.com/pack#offers) of being a student
+
+1. Go to [github.com](https://github.com/signup) and create an account using your **estia email address**
+2. You can select student and add your estia id card to get the benefits or skip this step and register later on [github education](https://education.github.com/)
+   [![Video explaining how to create a student account on github](/ressources/GithubRegistration.m4v)
+
+This email address will be used to sign your commits, if you use it on public repository it will be visible. Github offers you the possibility to have a private email associated with your commits (you can't use it to receive mails.)
+
+#### Get a private email address
+
+1. In the upper-right corner of any page, click your profile photo, then click **Settings**.
+2. In the "Access" section of the sidebar, click **Emails**.
+3. To keep your email address private when performing web-based Git operations, click **Keep my email addresses private**.![Image of checkbox to keep your email address private](https://docs.github.com/assets/cb-31265/images/help/settings/email_privacy.png)
+4. **Copy the email address (number-name@users.noreply.github.com) when you need to configure your git client.**

@@ -1,0 +1,34 @@
+# Git Clients
+
+There exist many git clients from the basic command line, to graphical client
+
+| Client | Benefits | Drawbacks |
+|--------|----------|-----------|
+| CLI    | All the possibilites of Git | Steep learning curve. You need to learn the command, but in the end you only use a handful of command |
+| SmartGit | Nice features to recover from mistake | Require a license. Busy user interface |
+| Github Desktop | Easy integration with Github | No tree visualisation | 
+
+## Client Installation
+::: {.panel-tabset}
+
+## Smart Git Installation
+
+If you are already using a specific git client, you can continue using this one. Otherwise, we invite you to use Smartgit.
+
+#### Instructions
+
+1.  **License**: download the license file from moodle: https://ingenieurs.estia.fr/pluginfile.php/20501/mod_folder/content/0/syntevo%20Non-Commercial%20License.lic?forcedownload=1
+2.  **Start**: launch the application smartgit from your search bar
+3.  **User Info:**
+    - _User Name_ will be used to sign your commits: Copy your github handle (the name of your github account)
+    - _Email address_ Use the email address of your [github account]. Use the private address provided by github (https://github.com/settings/emails)
+4.  **ssh client:** Use smartGit as SSH client
+5.  **Style:** Commits **(Log History)**
+6.  **Privacy:** Choose what you want to send.
+
+[![Video explaining how to install smartgit](/ressources/tutoSmartGit.m4v)
+
+## Github Desktop 
+
+Something Else
+:::
