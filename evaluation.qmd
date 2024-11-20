@@ -1,1 +1,32 @@
 # Evaluation
+
+The evaluation for the SGV part will focus on the project's version management:
+
+To Pass the module you must : 
+- Pass the Quizz on the 3rd session
+- Have used git / github for the web project
+
+## Quizz Criteria
+
+- The quizz will be based on the content of the course and the activities.
+- The quizz will be composed of 10 questions.
+- The quizz is on Moodle
+- The quizz will last 10 minutes using **Safe Exam Browser**
+
+## Project Evaluation Criteria
+
+- Each member must have created a Github account and joined the **team assigned to him/her.**
+- Each member must have made **several significant commits** accessible on the main branch
+    - At least 5 commits and 10% of the total number commits : in a team of 3, the team should have at least 15 commits. a 5, 15, 20 commits repartition is acceptable.
+    - Commits have a relevant title (not just "update" or "fix", or "aaaaaah", 1,2,3...)
+    - Commits contain modifications to the project (additions or deletions) 
+- The final project contains contributions from all contributors (advise your professor if a member is not contributing during the sessions, not after the project is due)
+- The project will contain at least one main branch and one release branch. 
+    - The main branch contains the latest version of the project, with all the contributions from the team.
+    - The release branch points to the “final” version of the project, which will be deployed online in the **Development Web Class**.
+
+The evaluation will be based on the following criteria:
+
+- The number of commits 
+- The quality of the commit messages 
+- The number of merge-commits

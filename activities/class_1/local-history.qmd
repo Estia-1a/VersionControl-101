@@ -1,0 +1,378 @@
+
+# Local History
+
+You will create a folder on your computer, initialize a git repository, add an HTML file, and start committing changes.
+
+## Create a folder and initialize a git repository
+1. Create an empty folder named `githubPage` in your preferred directory (where you want your projects to be stored, maybe `document/1a/info/`)
+  
+::: {.callout-note}
+Avoid using spaces in your folder names, it will make your life easier when working with the command line.
+:::
+
+2. Initialize a git repository in that folder 
+  - In the SmartGit menu: 
+    - Repository > Add or Create 
+    - Select the folder you created
+  - In the terminal: `git init` in the folder you created
+
+## Edit your files
+
+Git is not a text editor, you will need to use a text editor to create and modify your files. You can use any text editor you like, but we recommend using Visual Studio Code.
+
+::: {.callout-note}
+While Visual Studio Code can be used to edit individual files a Integrated development environment (IDE) like VScode really shine when you view the full project structure. 
+:::
+
+Open Visual Studio Code (from the window menu) and open the folder you created.
+- File > Open Folder
+- Select the folder you created
+
+Create a new index.html file. Save the Empty file (Ctrl + S) in the folder you created.
+
+You can see the file : 
+  1. in the file explorer on the left side of the window.
+  2. Look in the Windows file explorer that the file is indeed created
+  3. Look into SmartGit that you can "working tree/Index" is now "changed"
+
+
+## Your first commit
+
+- Stage the newly created file `index.html`
+- Commit the staged modification, give this commit a meaningful comment ( e.g. _feat: Add and index.html_ ) 
+
+::: {.callout-tip}
+Meaningful comments are important, they will help you and the other understand what you did in the future.  We recommand that you follow the [conventional Commits](https://www.conventionalcommits.org/fr/v1.0.0/) formats for your commit messages.
+
+```bash
+<type>[optional scope]: <description>
+
+[optional body]
+```
+
+
+examples: 
+
+- ```bash 
+feat: add a new section to the page
+  ```
+- ```bash
+fix: correct the url of the profile picture img
+```
+- ```bash
+  build: integrate the modification from William into the project
+
+  William has added a new section to the page, I have integrated it into the project
+  ```
+
+:::
+
+::: {.callout-note}
+Here are the most common types of commits you will use in this project:
+
+- **feat**: A new feature (you add a new page to you website, a new section to your page, an image, etc.)
+- **docs**: Documentation only changes (you add a README.md, a LICENSE file, etc to the project but the website itself is not modified)
+- **fix**: A bug fix. (you fix a typo, a broken link, a wrong id or class, etc.)
+- **build**: You merge a branch
+- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **refactor**: A code change that neither fixes a bug nor adds a feature (rename all the class in your project, change the structure of your project, etc.)
+
+other types of commits you will use in later project: 
+
+- **perf**: A code change that improves performance
+- **test**: Adding missing or correcting existing tests
+- **ci**: Changes to CI configuration files and scripts (example scopes: GitLabCI)
+:::
+
+## Linear History
+
+You will learn to make changes and commit them regularly. Commits will follow one another in a linear way.
+
+### Create the webpage
+
+1. Add a basic HTML skeleton to the index.html file
+
+
+```html {#lst-code .r lst-cap="Skeleton HTML code"}
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title> </title>
+  </head>
+  <body></body>
+</html>
+```
+
+
+2. Save the file 
+
+::: {.callout-important}
+It is very important that all your files are saved before you interact with git/smartgit. Git only tracks the files that are saved on your computer. Later on in the collaboration, when pulling changes from the remote repository, you will not see the change in VS code if the file is not saved.
+:::
+
+3. Stage and commit this last modification
+
+
+```{mermaid}
+%%| label: fig-linear-history-skeleton
+%%| fig-cap: "The commit graph of the project after adding the basic HTML skeleton"
+
+flowchart BT
+   Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+   A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+```
+
+### Linear History: Add some content and commit regularly
+
+- Add some content about you (Personal Info like name, age, class, and a photo if you want - Formation - Professional Experience - Other things about you like your hobbies for example)
+- **Stage** and **Commit** regularly (every commit should have a meaningful name)
+- Repeat until you have something similar to (it would ideally have more commits):
+
+```{mermaid}
+%%| label: fig-linear-history-regular-commit
+%%| fig-cap: "Linear history of the project after adding some content"
+
+flowchart BT
+  Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+  A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+  B --> C(Personal Info)
+  C --> D(Formation)
+  D --> E(Experience)
+  E --> F(Miscellanous)
+```
+
+
+## Nonlinear History
+
+### Branch and fast forward
+
+```{mermaid}
+%%| label: fig-linear-history-branch
+%%| fig-cap: "Commit graph with the main branch, the star indicate the HEAD"
+
+flowchart LR
+  subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+  %% F --> G(Empty CSS)
+  %% G --> H(Basic CSS)
+  end
+  subgraph branches
+      main>Main*] ==> F
+      %% css>CSS] ==> H
+  end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```
+
+1. Create a branch named "CSS"
+2. Checkout that branch (Double-click on "CSS" branch in the "Branches view" and confirm the Check Out dialog that comes up)
+
+```{mermaid}
+%%| label: fig-linear-history-two-branches
+%%| fig-cap: "Commit graph with two branches main and css pointing the same commit"
+
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    %% F --> G(Empty CSS)
+    %% G --> H(Basic CSS)
+    end
+    subgraph branches
+        main>Main*] ==> F
+        css>CSS] ==> F
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```
+3. Add a CSS file and commit ( _feat: Add a CSS page for style_ )
+4. Add some CSS and commit
+
+```{mermaid}
+%%| label: fig-linear-history-skeleton
+%%| fig-cap: "CSS branch is two commits in advance"
+
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    F --> G(Empty CSS)
+    G --> H(Basic CSS)
+    end
+    subgraph branches
+        main>Main*] ==> F
+        css>CSS] ==> F
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```
+
+5. Checkout the main/main branch (Double-click on the main branch in the "Branches view" and confirm the Check Out dialog that comes up)
+6. Merge the modifications from CSS into main
+7. Include your CSS into your HTML
+8. Commit new index.html
+
+```{mermaid}
+%%| label: fig-linear-history-fastforward
+%%| fig-cap: "Css was ahead from main it should result in a fastforward"
+
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    F --> G(Empty CSS)
+    G --> H(Basic CSS)
+    end
+    subgraph branches
+        main>Main*] ==> H
+        css>CSS] ==> H
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```
+
+
+### Branch and merge commit
+
+This time we will make a modification in the css branch, go back to the main branch and make modification and commiting them, simulating that both branches evolved (either you were working on a side project or you were working on a feature that was not ready to be merged yet and got back on the main branch to fix an issue, or simulating collaboration with another person). We will then merge the css branch into the main branch.
+
+Modification in the feature branch: 
+
+1. **Check out CSS branch**
+2. Modify your stylesheet (i.e. your CSS file)
+
+```CSS
+h1 {
+  font-size: 70px;
+  color: green;
+}
+```
+- Commit
+```{mermaid}
+%%| label: fig-linear-history-css-advance
+%%| fig-cap: "CSS branch is one commit in advance"
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    F --> G(Empty CSS)
+    G --> H(Basic CSS)
+    H --> I(Modified CSS)
+
+    end
+    subgraph branches
+        main>Main*] ==> H
+        css>CSS] ==> I
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+
+```
+
+
+Getting back to the main branch to make some modification: 
+
+3. **Check out main branch**
+4. Modify your stylesheet (i.e. your CSS file)
+
+```CSS
+p {
+  color: red;
+}
+```
+
+- Commit
+ ```{mermaid}
+%%| label: fig-diverging-history
+%%| fig-cap: "Main branch and CSS branch evolved at the same time"
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    F --> G(Empty CSS)
+    G --> H(Basic CSS)
+    H --> I(Modified CSS)
+    H --> J(Another modified CSS)
+
+    end
+    subgraph branches
+        main>Main*] ==> J
+        css>CSS] ==> I
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```
+  __
+
+
+Merging modification from CSS into main: 
+
+5. Merge the modification from CSS into main
+
+```{mermaid}
+%%| label: fig-diverging-history-Merge
+%%| fig-cap: "Result of a 3-way merge"
+
+flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61<br>Initial commit) --> A(819ab1<br>Empty Page<br>Just an empty index.html)
+    A --> B(c0f3ee<br>Skeleton<br>Added some basic html structure to the html document)
+    B --> C(Personal Info)
+    C --> D(Formation)
+    D --> E(Experience)
+    E --> F(Miscellanous)
+    F --> G(Empty CSS)
+    G --> H(Basic CSS)
+    H --> I(Modified CSS)
+    H --> J(Another modified CSS)
+    I --> K(New CSS)
+    J --> K
+
+    end
+    subgraph branches
+        main>Main*] ==> K
+        css>CSS] ==> K
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+```

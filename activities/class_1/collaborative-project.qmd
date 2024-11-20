@@ -1,0 +1,21 @@
+
+# Collaborative work
+
+Git and Github are great to work on collaborative works, in this activity you will create a website in groups of two, first alternating modifying the documents and then working concurrently:
+
+## Create a shared repository
+
+1. Create a repository
+
+- Create **ONE** new repository on Github, you can initialize it with a Readme and a License (e.g. MIT)
+- In Settings > Access > Add the other member of the group as an admin of the repository
+
+2. Clone the repository (Both members)
+
+## Contribute to the project
+
+3. Repeat the step of the single-user projects
+
+- One member creates an index.html, **stages**, **commits** and **pushes** his modification on the remote repository
+- The other members pull the modification and add a paragraph **stages**, **commits** and **pushes** his modification on the remote repository
+- Repeat several times (adding paragraph, CSS ...), before editing the files at same times. Commits and push as often as possible.

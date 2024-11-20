@@ -1,0 +1,60 @@
+# Working with a Remote
+
+For now, you only have a local project.
+This step will explain how to `push` your project to a remote repository on GitHub.
+
+## Create an empty repository
+
+1. Go to github.com
+2. Create a new **public** repository named _username_.github.io, where _username_ is your username
+
+- Example: my username is dhmmasson, my repository is dhmmasson.github.io
+- The repository should be public
+- The repository should be **empty** (do not initialize this repository)
+
+3. Copy the resulting url:
+
+- For the username dhmmasson, the url looks like that: https://github.com/dhmmasson/dhmmasson.github.io.git
+
+## Git Push
+
+1. Go back to smartgit, in your local repository.
+2. In the menu Remote > Add
+
+## Git Token
+
+GitHub prevents you from using a simple login/password workflow. You need to create a specific `access token`
+
+1. On GitHub, go to settings (by clicking on your profile picture)
+2. Go to `developer settings` (left menu, very bottom)
+3. Click on `personal access token`
+4. Click on generate a token (with a meaningful name). **Warning**: Make sure to check all permission(s) you want to grant!
+5. Copy your token as you will need it during the next step. Careful, once you leave the page, the token won't be visible anymore. (But don't worry, you can perform these few steps again if necessary).
+
+## Cloning
+
+1. Commit and push all your change.
+   - If SmartGit asks for the login/password, use your access token (previous step) instead of your password.
+   - Click `save credentials` to make sure you do not have to worry about it anymore!
+2. Visit the repository on github (https://github.com/<USERNAME>/<USERNAME>.github.io)
+3. **Delete your local repository**
+4. Clone the project back from github
+
+# Finishing up
+
+## README
+
+All repository should contains a README file. A README is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about.
+It should explain how to install, use or contribute to your project.
+
+It should be the first file you create on a project as it will give you the habit of documenting your projects. READMEs are usually written in a format called [markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) that allows you to easily write formatted text with a text editor.
+
+Today, we will use it to mark what we have to do for this activity.
+
+```markdown
+# My page
+
+This is my home page
+```
+
+Create the file Readme with .md extension.

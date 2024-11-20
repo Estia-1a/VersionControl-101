@@ -1,0 +1,31 @@
+---
+number-depth: 3
+fig-cap-location: bottom
+lst-cap-location: bottom
+---
+# Single User Repository
+
+## First Project - your GitHub page
+
+Your first project will be to create your personal page on GitHub. We invite you to create your public profile, you are free to select the content and the design your page as you wish. However, this page will be public, and you are producing it in the context of a class. 
+
+**Stay classy**
+
+### Activities Objectives 
+
+The aim of the project is to try hands-on the concepts seen in class:
+
+- Staging modifications
+- Creating Commits
+- Creating Branches
+- Merging Branches
+
+### Overview
+
+1. You will start **locally** by iteratively modifying your page: 
+  **the goal is to make small changes and commits regularly to handle the concepts,** not creating the page in one go.
+2. You will then work with a remote repository on GitHub. This repository will have a _specific name_ if you want it to work as your public page.
+
+
+
+
