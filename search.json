@@ -1,0 +1,341 @@
+[
+  {
+    "objectID": "activities/Multi-User-Projet.html",
+    "href": "activities/Multi-User-Projet.html",
+    "title": "8  Web development Project",
+    "section": "",
+    "text": "9 Project",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#context",
+    "href": "activities/Multi-User-Projet.html#context",
+    "title": "8  Web development Project",
+    "section": "9.1 Context",
+    "text": "9.1 Context\nIn june starts the “Projet Genie Informatique” in which you will have to manage a computer science project as team using git and github. For that project to work you will need to organize your team efforts, collaborate and so on.\nCreate guide that answer the following question How can git and github help you manage a group assignement ?\nRules :\n\nTeam of 5/6\nThe Guide is a website hosted on github\nThe Guide can have several pages but should have one index file that serves at the entry point.",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#pedagogical-objectives",
+    "href": "activities/Multi-User-Projet.html#pedagogical-objectives",
+    "title": "8  Web development Project",
+    "section": "9.2 Pedagogical Objectives",
+    "text": "9.2 Pedagogical Objectives\n\nLearn by doing : Explore concepts and tools provided to you and try to use them in this project.\nTeam based Project : Create and manage a small project as a team, use tools provided by github to help you.\nLearn about advanced concepts in git and github that help you manage your project.",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#advice-for-this-assignment",
+    "href": "activities/Multi-User-Projet.html#advice-for-this-assignment",
+    "title": "8  Web development Project",
+    "section": "9.3 Advice for this assignment",
+    "text": "9.3 Advice for this assignment\n\n9.3.1 Example of a Planning\nThis is a group project:\n\nYou should have group activity, to manage your team, share your work, learn from the other…\nYou should have individual activity, to list the concept you need to explore, to deep dive on a concept, to produce some content.\nGithub has a lot of tools to help you manage your project, discover them quickly to use them in your project.\n\nHere is an example of a planning you could follow during the 4h of this project. Feel free to modify to better suit your needs.\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n5min\nGroup Activity : Create team  Individual Activity : Follow the link on moodle to register your account on classroom.github.com\n\n\n15min\nGroup Activity : Organize your team\n\n\n15min\nIndividual Activity : List concepts that are relevant to explore\n\n\n15min\nGroup Activity : Organize your team: Divide the work among the team members\n\n\n60min\nIndividual Activity : Work on your assigned concepts\n\n\n5min\nGroup Activity : Reflect on Day 1\n\n\nEnd of Day 1\n–\n\n\n15min\nGroup Activity : Organize your team: Divide the remaining work among the team members\n\n\n60min\nIndividual Activity : Work on your assigned concepts\n\n\n30min\nGroup Activity : Final Debriefing\n\n\nEnd of Day 2\n–",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#what-should-you-find-on-a-page",
+    "href": "activities/Multi-User-Projet.html#what-should-you-find-on-a-page",
+    "title": "8  Web development Project",
+    "section": "9.4 What Should you find on a Page",
+    "text": "9.4 What Should you find on a Page\n\nThe name of the concept\nA brief explanation with your own words\nA tutorial on when and how to do it (or your own git client)\nA figure explaining what is happening (e.g., a graph, branch visualization, etc)\n\nYou can have one main page and then one page per command/concept, or one page per categories of commands (e.g., branches, repositories, etc), complexity (basic /advanced concepts), or even one page with everything alphabetically ordered and a main menu.\n\n9.4.1 How to Start\n\nFollow the link on moodle to create your team (find your name, create a new team or join an existing team)\nAll the group members clone the repository created for your team. \nOne group member adds a HTML file with a basic skeleton (see below), and an empty stylesheet file (.css) to the repository, commit them, and push them.\n\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"fr\" dir=\"ltr\"&gt;\n  &lt;head&gt;\n    &lt;meta charset=\"utf-8\" /&gt;\n    &lt;title&gt; &lt;/title&gt;\n    &lt;link href=\"style.css\" rel=\"stylesheet\" type=\"text/css\" /&gt;\n  &lt;/head&gt;\n  &lt;body&gt;&lt;/body&gt;\n&lt;/html&gt;\n\nAll the other group members pull to have the HTML and stylesheet files locally.\nAll group members work on their assigned tasks: don’t forget to commit regularly !\nWhen a group member is satisfied with the work done and want to share with the other ones, they push their changes. During this step, you may have to manage conflicts. Check difference (diff) with master and merge. Check your course or call the teacher if there are any problems.",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SGV 101",
+    "section": "",
+    "text": "1 Welcome to the Version Control 101\nYou will find here all the information relative to the class Systèmes de Gestion de Version",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Version Control 101</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "SGV 101",
+    "section": "1.1 Learning Outcomes",
+    "text": "1.1 Learning Outcomes\nBy the end of this course, students will be able to:\n\nUnderstand the Basics of Version Control\n\nExplain the purpose and benefits of version control systems (VCS).\n\nDistinguish between centralized and distributed version control systems.\n\nSet Up and Use a Version Control Environment\n\nInstall and configure a Git Client.\nCreate and initialize repositories for project management.\n\nExecute essential commands such as Stage, commit, pull, push, and clone.\n\nCollaborate Using Version Control\n\nCreate and manage branches for parallel development.\n\nMerge branches and resolve conflicts in a collaborative environment.\n\nImplement Best Practices in Version Management\n\nWrite clear and concise commit messages.\n\nOrganize repository structures for scalable project management.",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Version Control 101</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#schedule",
+    "href": "index.html#schedule",
+    "title": "SGV 101",
+    "section": "1.2 Schedule",
+    "text": "1.2 Schedule\n\nSession 1 : Introduction to Git and Github\n\nClass (1h30): Introduction to Git Concepts\nActivity (2h30):\n\nCreate a Github account\nSet up a Git Client\nCreate your first local Project\nPublish your project to a remote repository (Github)\nClone a project from Github\n\n\nSession 2 : Web Development Project\n\nProject (4h):\n\nJoin your team using Github Classroom (link in moodle)\nCode and Commits\n\n\nSession 3 : Web Development Project and Quizz\n\nProject (3h30):\n\nCode and Commits\n\nEvaluation (15min)\n\nQuizz on Moodle\nAutomatic Evaluation of the project on Github\n\n\n\nYou can use the issues système to ask questions",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Version Control 101</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html",
+    "href": "evaluation.html",
+    "title": "2  Evaluation",
+    "section": "",
+    "text": "2.1 Quizz Criteria",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#quizz-criteria",
+    "href": "evaluation.html#quizz-criteria",
+    "title": "2  Evaluation",
+    "section": "",
+    "text": "The quizz will be based on the content of the course and the activities.\nThe quizz will be composed of 10 questions.\nThe quizz is on Moodle\nThe quizz will last 10 minutes using Safe Exam Browser",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "evaluation.html#project-evaluation-criteria",
+    "href": "evaluation.html#project-evaluation-criteria",
+    "title": "2  Evaluation",
+    "section": "2.2 Project Evaluation Criteria",
+    "text": "2.2 Project Evaluation Criteria\n\nEach member must have created a Github account and joined the team assigned to him/her.\nEach member must have made several significant commits accessible on the main branch\n\nAt least 5 commits and 10% of the total number commits : in a team of 3, the team should have at least 15 commits. a 5, 15, 20 commits repartition is acceptable.\nCommits have a relevant title (not just “update” or “fix”, or “aaaaaah”, 1,2,3…)\nCommits contain modifications to the project (additions or deletions)\n\nThe final project contains contributions from all contributors (advise your professor if a member is not contributing during the sessions, not after the project is due)\nThe project will contain at least one main branch and one release branch.\n\nThe main branch contains the latest version of the project, with all the contributions from the team.\nThe release branch points to the “final” version of the project, which will be deployed online in the Development Web Class.\n\n\nThe evaluation will be based on the following criteria:\n\nThe number of commits\nThe quality of the commit messages\nThe number of merge-commits",
+    "crumbs": [
+      "Introduction",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/setup/Github_Account_Creation.html",
+    "href": "activities/setup/Github_Account_Creation.html",
+    "title": "3  GitHub account creation",
+    "section": "",
+    "text": "Note: If you already have a personal GitHub account you can use it, you can link it with your Estia address to get the benefits of being a student\n\nGo to github.com and create an account using your estia email address\nYou can select student and add your estia id card to get the benefits or skip this step and register later on github education [Video explaining how to create a student account on github\n\nThis email address will be used to sign your commits, if you use it on public repository it will be visible. Github offers you the possibility to have a private email associated with your commits (you can’t use it to receive mails.)\n\nGet a private email address\n\nIn the upper-right corner of any page, click your profile photo, then click Settings.\nIn the “Access” section of the sidebar, click Emails.\nTo keep your email address private when performing web-based Git operations, click Keep my email addresses private.\nCopy the email address (number-name@users.noreply.github.com) when you need to configure your git client.",
+    "crumbs": [
+      "Setting Up",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>GitHub account creation</span>"
+    ]
+  },
+  {
+    "objectID": "activities/setup/Git_Clients.html",
+    "href": "activities/setup/Git_Clients.html",
+    "title": "4  Git Clients",
+    "section": "",
+    "text": "4.1 Client Installation",
+    "crumbs": [
+      "Setting Up",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git Clients</span>"
+    ]
+  },
+  {
+    "objectID": "activities/setup/Git_Clients.html#client-installation",
+    "href": "activities/setup/Git_Clients.html#client-installation",
+    "title": "4  Git Clients",
+    "section": "",
+    "text": "Smart Git InstallationGithub Desktop\n\n\nIf you are already using a specific git client, you can continue using this one. Otherwise, we invite you to use Smartgit.\n\nInstructions\n\nLicense: download the license file from moodle: https://ingenieurs.estia.fr/pluginfile.php/20501/mod_folder/content/0/syntevo%20Non-Commercial%20License.lic?forcedownload=1\nStart: launch the application smartgit from your search bar\nUser Info:\n\nUser Name will be used to sign your commits: Copy your github handle (the name of your github account)\nEmail address Use the email address of your [github account]. Use the private address provided by github (https://github.com/settings/emails)\n\nssh client: Use smartGit as SSH client\nStyle: Commits (Log History)\nPrivacy: Choose what you want to send.\n\n[Video explaining how to install smartgit\n\n\n\nSomething Else",
+    "crumbs": [
+      "Setting Up",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git Clients</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html",
+    "href": "activities/class_1/local-history.html",
+    "title": "5  Local History",
+    "section": "",
+    "text": "5.1 Create a folder and initialize a git repository",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html#create-a-folder-and-initialize-a-git-repository",
+    "href": "activities/class_1/local-history.html#create-a-folder-and-initialize-a-git-repository",
+    "title": "5  Local History",
+    "section": "",
+    "text": "Create an empty folder named githubPage in your preferred directory (where you want your projects to be stored, maybe document/1a/info/)\n\n\n\n\n\n\n\nNote\n\n\n\nAvoid using spaces in your folder names, it will make your life easier when working with the command line.\n\n\n\nInitialize a git repository in that folder\n\n\nIn the SmartGit menu:\n\nRepository &gt; Add or Create\nSelect the folder you created\n\nIn the terminal: git init in the folder you created",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html#edit-your-files",
+    "href": "activities/class_1/local-history.html#edit-your-files",
+    "title": "5  Local History",
+    "section": "5.2 Edit your files",
+    "text": "5.2 Edit your files\nGit is not a text editor, you will need to use a text editor to create and modify your files. You can use any text editor you like, but we recommend using Visual Studio Code.\n\n\n\n\n\n\nNote\n\n\n\nWhile Visual Studio Code can be used to edit individual files a Integrated development environment (IDE) like VScode really shine when you view the full project structure.\n\n\nOpen Visual Studio Code (from the window menu) and open the folder you created. - File &gt; Open Folder - Select the folder you created\nCreate a new index.html file. Save the Empty file (Ctrl + S) in the folder you created.\nYou can see the file : 1. in the file explorer on the left side of the window. 2. Look in the Windows file explorer that the file is indeed created 3. Look into SmartGit that you can “working tree/Index” is now “changed”",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html#your-first-commit",
+    "href": "activities/class_1/local-history.html#your-first-commit",
+    "title": "5  Local History",
+    "section": "5.3 Your first commit",
+    "text": "5.3 Your first commit\n\nStage the newly created file index.html\nCommit the staged modification, give this commit a meaningful comment ( e.g. feat: Add and index.html )\n\n\n\n\n\n\n\nTip\n\n\n\nMeaningful comments are important, they will help you and the other understand what you did in the future. We recommand that you follow the conventional Commits formats for your commit messages.\n&lt;type&gt;[optional scope]: &lt;description&gt;\n\n[optional body]\nexamples:\n\nfeat: add a new section to the page\nfix: correct the url of the profile picture img\nbuild: integrate the modification from William into the project\n\nWilliam has added a new section to the page, I have integrated it into the project\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nHere are the most common types of commits you will use in this project:\n\nfeat: A new feature (you add a new page to you website, a new section to your page, an image, etc.)\ndocs: Documentation only changes (you add a README.md, a LICENSE file, etc to the project but the website itself is not modified)\nfix: A bug fix. (you fix a typo, a broken link, a wrong id or class, etc.)\nbuild: You merge a branch\nstyle: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)\nrefactor: A code change that neither fixes a bug nor adds a feature (rename all the class in your project, change the structure of your project, etc.)\n\nother types of commits you will use in later project:\n\nperf: A code change that improves performance\ntest: Adding missing or correcting existing tests\nci: Changes to CI configuration files and scripts (example scopes: GitLabCI)",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html#linear-history",
+    "href": "activities/class_1/local-history.html#linear-history",
+    "title": "5  Local History",
+    "section": "5.4 Linear History",
+    "text": "5.4 Linear History\nYou will learn to make changes and commit them regularly. Commits will follow one another in a linear way.\n\n5.4.1 Create the webpage\n\nAdd a basic HTML skeleton to the index.html file\n\n\n\n\n&lt;!DOCTYPE html&gt;\n&lt;html lang=\"fr\" dir=\"ltr\"&gt;\n  &lt;head&gt;\n    &lt;meta charset=\"utf-8\" /&gt;\n    &lt;title&gt; &lt;/title&gt;\n  &lt;/head&gt;\n  &lt;body&gt;&lt;/body&gt;\n&lt;/html&gt;\n\n\nListing 5.1: Skeleton HTML code\n\n\n\n\nSave the file\n\n\n\n\n\n\n\nImportant\n\n\n\nIt is very important that all your files are saved before you interact with git/smartgit. Git only tracks the files that are saved on your computer. Later on in the collaboration, when pulling changes from the remote repository, you will not see the change in VS code if the file is not saved.\n\n\n\nStage and commit this last modification\n\n\n\n\n\n\n\nflowchart BT\n   Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n   A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n\n\n\n\nFigure 5.1: The commit graph of the project after adding the basic HTML skeleton\n\n\n\n\n\n\n\n5.4.2 Linear History: Add some content and commit regularly\n\nAdd some content about you (Personal Info like name, age, class, and a photo if you want - Formation - Professional Experience - Other things about you like your hobbies for example)\nStage and Commit regularly (every commit should have a meaningful name)\nRepeat until you have something similar to (it would ideally have more commits):\n\n\n\n\n\n\n\nflowchart BT\n  Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n  A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n  B --&gt; C(Personal Info)\n  C --&gt; D(Formation)\n  D --&gt; E(Experience)\n  E --&gt; F(Miscellanous)\n\n\n\n\nFigure 5.2: Linear history of the project after adding some content",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/local-history.html#nonlinear-history",
+    "href": "activities/class_1/local-history.html#nonlinear-history",
+    "title": "5  Local History",
+    "section": "5.5 Nonlinear History",
+    "text": "5.5 Nonlinear History\n\n5.5.1 Branch and fast forward\n\n\n\n\n\n\nflowchart LR\n  subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n  %% F --&gt; G(Empty CSS)\n  %% G --&gt; H(Basic CSS)\n  end\n  subgraph branches\n      main&gt;Main*] ==&gt; F\n      %% css&gt;CSS] ==&gt; H\n  end\n\nclass main HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.3: Commit graph with the main branch, the star indicate the HEAD\n\n\n\n\n\n\nCreate a branch named “CSS”\nCheckout that branch (Double-click on “CSS” branch in the “Branches view” and confirm the Check Out dialog that comes up)\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    %% F --&gt; G(Empty CSS)\n    %% G --&gt; H(Basic CSS)\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; F\n        css&gt;CSS] ==&gt; F\n   end\n\nclass css HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.4: Commit graph with two branches main and css pointing the same commit\n\n\n\n\n\n\nAdd a CSS file and commit ( feat: Add a CSS page for style )\nAdd some CSS and commit\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    F --&gt; G(Empty CSS)\n    G --&gt; H(Basic CSS)\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; F\n        css&gt;CSS] ==&gt; F\n   end\n\nclass css HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.5: CSS branch is two commits in advance\n\n\n\n\n\n\nCheckout the main/main branch (Double-click on the main branch in the “Branches view” and confirm the Check Out dialog that comes up)\nMerge the modifications from CSS into main\nInclude your CSS into your HTML\nCommit new index.html\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    F --&gt; G(Empty CSS)\n    G --&gt; H(Basic CSS)\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; H\n        css&gt;CSS] ==&gt; H\n   end\n\nclass main HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.6: Css was ahead from main it should result in a fastforward\n\n\n\n\n\n\n\n5.5.2 Branch and merge commit\nThis time we will make a modification in the css branch, go back to the main branch and make modification and commiting them, simulating that both branches evolved (either you were working on a side project or you were working on a feature that was not ready to be merged yet and got back on the main branch to fix an issue, or simulating collaboration with another person). We will then merge the css branch into the main branch.\nModification in the feature branch:\n\nCheck out CSS branch\nModify your stylesheet (i.e. your CSS file)\n\nh1 {\n  font-size: 70px;\n  color: green;\n}\n\nCommit\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    F --&gt; G(Empty CSS)\n    G --&gt; H(Basic CSS)\n    H --&gt; I(Modified CSS)\n\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; H\n        css&gt;CSS] ==&gt; I\n   end\n\nclass css HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\n\nFigure 5.7: CSS branch is one commit in advance\n\n\n\n\n\nGetting back to the main branch to make some modification:\n\nCheck out main branch\nModify your stylesheet (i.e. your CSS file)\n\np {\n  color: red;\n}\n\nCommit\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    F --&gt; G(Empty CSS)\n    G --&gt; H(Basic CSS)\n    H --&gt; I(Modified CSS)\n    H --&gt; J(Another modified CSS)\n\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; J\n        css&gt;CSS] ==&gt; I\n   end\n\nclass main HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.8: Main branch and CSS branch evolved at the same time\n\n\n\n\n\n__\nMerging modification from CSS into main:\n\nMerge the modification from CSS into main\n\n\n\n\n\n\n\nflowchart LR\n    subgraph commits\n    direction BT \n    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)\n    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)\n    B --&gt; C(Personal Info)\n    C --&gt; D(Formation)\n    D --&gt; E(Experience)\n    E --&gt; F(Miscellanous)\n    F --&gt; G(Empty CSS)\n    G --&gt; H(Basic CSS)\n    H --&gt; I(Modified CSS)\n    H --&gt; J(Another modified CSS)\n    I --&gt; K(New CSS)\n    J --&gt; K\n\n    end\n    subgraph branches\n        main&gt;Main*] ==&gt; K\n        css&gt;CSS] ==&gt; K\n   end\n\nclass main HEAD;\nclassDef HEAD font-weight:bolder,fill:#fdf\n\n\n\n\nFigure 5.9: Result of a 3-way merge",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html",
+    "href": "activities/class_1/remote-history.html",
+    "title": "6  Working with a Remote",
+    "section": "",
+    "text": "6.1 Create an empty repository",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html#create-an-empty-repository",
+    "href": "activities/class_1/remote-history.html#create-an-empty-repository",
+    "title": "6  Working with a Remote",
+    "section": "",
+    "text": "Go to github.com\nCreate a new public repository named username.github.io, where username is your username\n\n\nExample: my username is dhmmasson, my repository is dhmmasson.github.io\nThe repository should be public\nThe repository should be empty (do not initialize this repository)\n\n\nCopy the resulting url:\n\n\nFor the username dhmmasson, the url looks like that: https://github.com/dhmmasson/dhmmasson.github.io.git",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html#git-push",
+    "href": "activities/class_1/remote-history.html#git-push",
+    "title": "6  Working with a Remote",
+    "section": "6.2 Git Push",
+    "text": "6.2 Git Push\n\nGo back to smartgit, in your local repository.\nIn the menu Remote &gt; Add",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html#git-token",
+    "href": "activities/class_1/remote-history.html#git-token",
+    "title": "6  Working with a Remote",
+    "section": "6.3 Git Token",
+    "text": "6.3 Git Token\nGitHub prevents you from using a simple login/password workflow. You need to create a specific access token\n\nOn GitHub, go to settings (by clicking on your profile picture)\nGo to developer settings (left menu, very bottom)\nClick on personal access token\nClick on generate a token (with a meaningful name). Warning: Make sure to check all permission(s) you want to grant!\nCopy your token as you will need it during the next step. Careful, once you leave the page, the token won’t be visible anymore. (But don’t worry, you can perform these few steps again if necessary).",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html#cloning",
+    "href": "activities/class_1/remote-history.html#cloning",
+    "title": "6  Working with a Remote",
+    "section": "6.4 Cloning",
+    "text": "6.4 Cloning\n\nCommit and push all your change.\n\nIf SmartGit asks for the login/password, use your access token (previous step) instead of your password.\nClick save credentials to make sure you do not have to worry about it anymore!\n\nVisit the repository on github (https://github.com//.github.io)\nDelete your local repository\nClone the project back from github",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/remote-history.html#readme",
+    "href": "activities/class_1/remote-history.html#readme",
+    "title": "6  Working with a Remote",
+    "section": "7.1 README",
+    "text": "7.1 README\nAll repository should contains a README file. A README is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about. It should explain how to install, use or contribute to your project.\nIt should be the first file you create on a project as it will give you the habit of documenting your projects. READMEs are usually written in a format called markdown that allows you to easily write formatted text with a text editor.\nToday, we will use it to mark what we have to do for this activity.\n# My page\n\nThis is my home page\nCreate the file Readme with .md extension.",
+    "crumbs": [
+      "Single User Repository",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/collaborative-project.html",
+    "href": "activities/class_1/collaborative-project.html",
+    "title": "7  Collaborative work",
+    "section": "",
+    "text": "7.1 Create a shared repository",
+    "crumbs": [
+      "Multi-User Project",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Collaborative work</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/collaborative-project.html#create-a-shared-repository",
+    "href": "activities/class_1/collaborative-project.html#create-a-shared-repository",
+    "title": "7  Collaborative work",
+    "section": "",
+    "text": "Create a repository\n\n\nCreate ONE new repository on Github, you can initialize it with a Readme and a License (e.g. MIT)\nIn Settings &gt; Access &gt; Add the other member of the group as an admin of the repository\n\n\nClone the repository (Both members)",
+    "crumbs": [
+      "Multi-User Project",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Collaborative work</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/collaborative-project.html#contribute-to-the-project",
+    "href": "activities/class_1/collaborative-project.html#contribute-to-the-project",
+    "title": "7  Collaborative work",
+    "section": "7.2 Contribute to the project",
+    "text": "7.2 Contribute to the project\n\nRepeat the step of the single-user projects\n\n\nOne member creates an index.html, stages, commits and pushes his modification on the remote repository\nThe other members pull the modification and add a paragraph stages, commits and pushes his modification on the remote repository\nRepeat several times (adding paragraph, CSS …), before editing the files at same times. Commits and push as often as possible.",
+    "crumbs": [
+      "Multi-User Project",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Collaborative work</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/Single-User-Project.html",
+    "href": "activities/class_1/Single-User-Project.html",
+    "title": "Single User Repository",
+    "section": "",
+    "text": "First Project - your GitHub page\nYour first project will be to create your personal page on GitHub. We invite you to create your public profile, you are free to select the content and the design your page as you wish. However, this page will be public, and you are producing it in the context of a class.\nStay classy",
+    "crumbs": [
+      "Single User Repository"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
+    "href": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
+    "title": "Single User Repository",
+    "section": "",
+    "text": "Activities Objectives\nThe aim of the project is to try hands-on the concepts seen in class:\n\nStaging modifications\nCreating Commits\nCreating Branches\nMerging Branches\n\n\n\nOverview\n\nYou will start locally by iteratively modifying your page: the goal is to make small changes and commits regularly to handle the concepts, not creating the page in one go.\nYou will then work with a remote repository on GitHub. This repository will have a specific name if you want it to work as your public page.",
+    "crumbs": [
+      "Single User Repository"
+    ]
+  }
+]

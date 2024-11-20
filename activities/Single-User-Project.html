@@ -1,0 +1,1361 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.53">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Single User Repository – SGV 101</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../activities/local-history.html" rel="next">
+<link href="../activities/setup/Git_Clients.html" rel="prev">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="../styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../activities/Single-User-Project.html">Single User Repository</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../">SGV 101</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Introduction</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Version Control 101</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../evaluation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Evaluation</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Setting Up</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/setup/Github_Account_Creation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">GitHub account creation</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/setup/Git_Clients.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git Clients</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../activities/Single-User-Project.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Single User Repository</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/local-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Start from scratch</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/remote-history.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Working with a Remote</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
+ <span class="menu-text">Project</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../activities/Multi-User-Projet.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Web development Project</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#first-project---your-github-page" id="toc-first-project---your-github-page" class="nav-link active" data-scroll-target="#first-project---your-github-page">First Project - your GitHub page</a>
+  <ul class="collapse">
+  <li><a href="#activities-objectives" id="toc-activities-objectives" class="nav-link" data-scroll-target="#activities-objectives">Activities Objectives</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link" data-scroll-target="#overview">Overview</a></li>
+  </ul></li>
+  <li><a href="#start-from-scratch" id="toc-start-from-scratch" class="nav-link" data-scroll-target="#start-from-scratch">Start from scratch</a>
+  <ul class="collapse">
+  <li><a href="#create-a-folder-and-initialize-a-git-repository" id="toc-create-a-folder-and-initialize-a-git-repository" class="nav-link" data-scroll-target="#create-a-folder-and-initialize-a-git-repository">Create a folder and initialize a git repository</a></li>
+  <li><a href="#edit-your-files" id="toc-edit-your-files" class="nav-link" data-scroll-target="#edit-your-files">Edit your files</a></li>
+  <li><a href="#your-first-commit" id="toc-your-first-commit" class="nav-link" data-scroll-target="#your-first-commit">Your first commit</a></li>
+  <li><a href="#linear-history" id="toc-linear-history" class="nav-link" data-scroll-target="#linear-history">Linear History</a></li>
+  <li><a href="#nonlinear-history" id="toc-nonlinear-history" class="nav-link" data-scroll-target="#nonlinear-history">Nonlinear History</a></li>
+  <li><a href="#working-with-a-remote" id="toc-working-with-a-remote" class="nav-link" data-scroll-target="#working-with-a-remote">Working with a Remote</a></li>
+  <li><a href="#finishing-up" id="toc-finishing-up" class="nav-link" data-scroll-target="#finishing-up">Finishing up</a></li>
+  </ul></li>
+  <li><a href="#collaborative-work" id="toc-collaborative-work" class="nav-link" data-scroll-target="#collaborative-work">Collaborative work</a>
+  <ul class="collapse">
+  <li><a href="#create-a-shared-repository" id="toc-create-a-shared-repository" class="nav-link" data-scroll-target="#create-a-shared-repository">Create a shared repository</a></li>
+  <li><a href="#contribute-to-the-project" id="toc-contribute-to-the-project" class="nav-link" data-scroll-target="#contribute-to-the-project">Contribute to the project</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Single User Repository</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="first-project---your-github-page" class="level2">
+<h2 class="anchored" data-anchor-id="first-project---your-github-page">First Project - your GitHub page</h2>
+<p>Your first project will be to create your personal page on GitHub. We invite you to create your public profile, you are free to select the content and the design your page as you wish. However, this page will be public, and you are producing it in the context of a class.</p>
+<p><strong>Stay classy</strong></p>
+<section id="activities-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="activities-objectives">Activities Objectives</h3>
+<p>The aim of the project is to try hands-on the concepts seen in class:</p>
+<ul>
+<li>Staging modifications</li>
+<li>Creating Commits</li>
+<li>Creating Branches</li>
+<li>Merging Branches</li>
+</ul>
+</section>
+<section id="overview" class="level3">
+<h3 class="anchored" data-anchor-id="overview">Overview</h3>
+<ol type="1">
+<li>You will start <strong>locally</strong> by iteratively modifying your page: <strong>the goal is to make small changes and commits regularly to handle the concepts,</strong> not creating the page in one go.</li>
+<li>You will then work with a remote repository on GitHub. This repository will have a <em>specific name</em> if you want it to work as your public page.</li>
+</ol>
+</section>
+</section>
+<section id="start-from-scratch" class="level2">
+<h2 class="anchored" data-anchor-id="start-from-scratch">Start from scratch</h2>
+<p>You will create a folder on your computer, initialize a git repository, add an HTML file, and start committing changes.</p>
+<section id="create-a-folder-and-initialize-a-git-repository" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-folder-and-initialize-a-git-repository">Create a folder and initialize a git repository</h3>
+<ol type="1">
+<li>Create an empty folder named <code>githubPage</code> in your preferred directory (where you want your projects to be stored, maybe <code>document/1a/info/</code>)</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Avoid using spaces in your folder names, it will make your life easier when working with the command line.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li>Initialize a git repository in that folder</li>
+</ol>
+<ul>
+<li>In the SmartGit menu:
+<ul>
+<li>Repository &gt; Add or Create</li>
+<li>Select the folder you created</li>
+</ul></li>
+<li>In the terminal: <code>git init</code> in the folder you created</li>
+</ul>
+</section>
+<section id="edit-your-files" class="level3">
+<h3 class="anchored" data-anchor-id="edit-your-files">Edit your files</h3>
+<p>Git is not a text editor, you will need to use a text editor to create and modify your files. You can use any text editor you like, but we recommend using Visual Studio Code.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>While Visual Studio Code can be used to edit individual files a Integrated development environment (IDE) like VScode really shine when you view the full project structure.</p>
+</div>
+</div>
+<p>Open Visual Studio Code (from the window menu) and open the folder you created. - File &gt; Open Folder - Select the folder you created</p>
+<p>Create a new index.html file. Save the Empty file (Ctrl + S) in the folder you created.</p>
+<p>You can see the file : 1. in the file explorer on the left side of the window. 2. Look in the Windows file explorer that the file is indeed created 3. Look into SmartGit that you can “working tree/Index” is now “changed”</p>
+</section>
+<section id="your-first-commit" class="level3">
+<h3 class="anchored" data-anchor-id="your-first-commit">Your first commit</h3>
+<ul>
+<li>Stage the newly created file <code>index.html</code></li>
+<li>Commit the staged modification, give this commit a meaningful comment ( e.g.&nbsp;<em>feat: Add and index.html</em> )</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Meaningful comments are important, they will help you and the other understand what you did in the future. We recommand that you follow the <a href="https://www.conventionalcommits.org/fr/v1.0.0/">conventional Commits</a> formats for your commit messages.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>type<span class="op">&gt;</span><span class="ex">[optional</span> scope]: <span class="op">&lt;</span>description<span class="op">&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">[optional</span> body]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>examples:</p>
+<ul>
+<li><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">feat:</span> add a new section to the page</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">fix:</span> correct the url of the profile picture img</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+<li><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">build:</span> integrate the modification from William into the project</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="ex">William</span> has added a new section to the page, I have integrated it into the project</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Here are the most common types of commits you will use in this project:</p>
+<ul>
+<li><strong>feat</strong>: A new feature (you add a new page to you website, a new section to your page, an image, etc.)</li>
+<li><strong>docs</strong>: Documentation only changes (you add a README.md, a LICENSE file, etc to the project but the website itself is not modified)</li>
+<li><strong>fix</strong>: A bug fix. (you fix a typo, a broken link, a wrong id or class, etc.)</li>
+<li><strong>build</strong>: You merge a branch</li>
+<li><strong>style</strong>: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)</li>
+<li><strong>refactor</strong>: A code change that neither fixes a bug nor adds a feature (rename all the class in your project, change the structure of your project, etc.)</li>
+</ul>
+<p>other types of commits you will use in later project:</p>
+<ul>
+<li><strong>perf</strong>: A code change that improves performance</li>
+<li><strong>test</strong>: Adding missing or correcting existing tests</li>
+<li><strong>ci</strong>: Changes to CI configuration files and scripts (example scopes: GitLabCI)</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="linear-history" class="level3">
+<h3 class="anchored" data-anchor-id="linear-history">Linear History</h3>
+<p>You will learn to make changes and commit them regularly. Commits will follow one another in a linear way.</p>
+<section id="create-the-webpage" class="level4">
+<h4 class="anchored" data-anchor-id="create-the-webpage">Create the webpage</h4>
+<ol type="1">
+<li>Add a basic HTML skeleton to the index.html file</li>
+</ol>
+<div id="lst-code" class="html r listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure">
+<div aria-describedby="lst-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-code"><pre class="sourceCode html r code-with-copy"><code class="sourceCode html"><span id="lst-code-1"><a href="#lst-code-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE</span> html<span class="dt">&gt;</span></span>
+<span id="lst-code-2"><a href="#lst-code-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span><span class="ot"> lang</span><span class="op">=</span><span class="st">"fr"</span><span class="ot"> dir</span><span class="op">=</span><span class="st">"ltr"</span><span class="dt">&gt;</span></span>
+<span id="lst-code-3"><a href="#lst-code-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="lst-code-4"><a href="#lst-code-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span><span class="ot"> charset</span><span class="op">=</span><span class="st">"utf-8"</span><span class="ot"> </span><span class="dt">/&gt;</span></span>
+<span id="lst-code-5"><a href="#lst-code-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span> <span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="lst-code-6"><a href="#lst-code-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="lst-code-7"><a href="#lst-code-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="lst-code-8"><a href="#lst-code-8" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-lst" id="lst-code-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;1: Skeleton HTML code
+</figcaption>
+</figure>
+</div>
+<ol start="2" type="1">
+<li>Save the file</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>It is very important that all your files are saved before you interact with git/smartgit. Git only tracks the files that are saved on your computer. Later on in the collaboration, when pulling changes from the remote repository, you will not see the change in VS code if the file is not saved.</p>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Stage and commit this last modification</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-skeleton" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-skeleton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-skeleton">flowchart BT
+   Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+   A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-skeleton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: The commit graph of the project after adding the basic HTML skeleton
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="linear-history-add-some-content-and-commit-regularly" class="level4">
+<h4 class="anchored" data-anchor-id="linear-history-add-some-content-and-commit-regularly">Linear History: Add some content and commit regularly</h4>
+<ul>
+<li>Add some content about you (Personal Info like name, age, class, and a photo if you want - Formation - Professional Experience - Other things about you like your hobbies for example)</li>
+<li><strong>Stage</strong> and <strong>Commit</strong> regularly (every commit should have a meaningful name)</li>
+<li>Repeat until you have something similar to (it would ideally have more commits):</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-regular-commit" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-regular-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-regular-commit">flowchart BT
+  Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+  A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+  B --&gt; C(Personal Info)
+  C --&gt; D(Formation)
+  D --&gt; E(Experience)
+  E --&gt; F(Miscellanous)
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-regular-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Linear history of the project after adding some content
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="nonlinear-history" class="level3">
+<h3 class="anchored" data-anchor-id="nonlinear-history">Nonlinear History</h3>
+<section id="branch-and-fast-forward" class="level4">
+<h4 class="anchored" data-anchor-id="branch-and-fast-forward">Branch and fast forward</h4>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-branch" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-branch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-branch">flowchart LR
+  subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+  %% F --&gt; G(Empty CSS)
+  %% G --&gt; H(Basic CSS)
+  end
+  subgraph branches
+      main&gt;Main*] ==&gt; F
+      %% css&gt;CSS] ==&gt; H
+  end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-branch-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Commit graph with the main branch, the star indicate the HEAD
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol type="1">
+<li>Create a branch named “CSS”</li>
+<li>Checkout that branch (Double-click on “CSS” branch in the “Branches view” and confirm the Check Out dialog that comes up)</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-two-branches" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-two-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-two-branches">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    %% F --&gt; G(Empty CSS)
+    %% G --&gt; H(Basic CSS)
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; F
+        css&gt;CSS] ==&gt; F
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-two-branches-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Commit graph with two branches main and css pointing the same commit
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Add a CSS file and commit ( <em>feat: Add a CSS page for style</em> )</li>
+<li>Add some CSS and commit</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-skeleton" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-skeleton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-skeleton">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    F --&gt; G(Empty CSS)
+    G --&gt; H(Basic CSS)
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; F
+        css&gt;CSS] ==&gt; F
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-skeleton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: CSS branch is two commits in advance
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ol start="5" type="1">
+<li>Checkout the main/main branch (Double-click on the main branch in the “Branches view” and confirm the Check Out dialog that comes up)</li>
+<li>Merge the modifications from CSS into main</li>
+<li>Include your CSS into your HTML</li>
+<li>Commit new index.html</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-fastforward" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-fastforward-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-fastforward">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    F --&gt; G(Empty CSS)
+    G --&gt; H(Basic CSS)
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; H
+        css&gt;CSS] ==&gt; H
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-fastforward-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Css was ahead from main it should result in a fastforward
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="branch-and-merge-commit" class="level4">
+<h4 class="anchored" data-anchor-id="branch-and-merge-commit">Branch and merge commit</h4>
+<p>This time we will make a modification in the css branch, go back to the main branch and make modification and commiting them, simulating that both branches evolved (either you were working on a side project or you were working on a feature that was not ready to be merged yet and got back on the main branch to fix an issue, or simulating collaboration with another person). We will then merge the css branch into the main branch.</p>
+<p>Modification in the feature branch:</p>
+<ol type="1">
+<li><strong>Check out CSS branch</strong></li>
+<li>Modify your stylesheet (i.e.&nbsp;your CSS file)</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>h1 {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">font-size</span><span class="ch">:</span> <span class="dv">70</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">green</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Commit</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-linear-history-css-advance" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-linear-history-css-advance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-linear-history-css-advance">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    F --&gt; G(Empty CSS)
+    G --&gt; H(Basic CSS)
+    H --&gt; I(Modified CSS)
+
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; H
+        css&gt;CSS] ==&gt; I
+   end
+
+class css HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-linear-history-css-advance-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: CSS branch is one commit in advance
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Getting back to the main branch to make some modification:</p>
+<ol start="3" type="1">
+<li><strong>Check out main branch</strong></li>
+<li>Modify your stylesheet (i.e.&nbsp;your CSS file)</li>
+</ol>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css code-with-copy"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>p {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span><span class="ch">:</span> <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ul>
+<li>Commit</li>
+</ul>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-diverging-history" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diverging-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-diverging-history">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    F --&gt; G(Empty CSS)
+    G --&gt; H(Basic CSS)
+    H --&gt; I(Modified CSS)
+    H --&gt; J(Another modified CSS)
+
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; J
+        css&gt;CSS] ==&gt; I
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diverging-history-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Main branch and CSS branch evolved at the same time
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>__</p>
+<p>Merging modification from CSS into main:</p>
+<ol start="5" type="1">
+<li>Merge the modification from CSS into main</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-diverging-history-Merge" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diverging-history-Merge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-diverging-history-Merge">flowchart LR
+    subgraph commits
+    direction BT 
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(Personal Info)
+    C --&gt; D(Formation)
+    D --&gt; E(Experience)
+    E --&gt; F(Miscellanous)
+    F --&gt; G(Empty CSS)
+    G --&gt; H(Basic CSS)
+    H --&gt; I(Modified CSS)
+    H --&gt; J(Another modified CSS)
+    I --&gt; K(New CSS)
+    J --&gt; K
+
+    end
+    subgraph branches
+        main&gt;Main*] ==&gt; K
+        css&gt;CSS] ==&gt; K
+   end
+
+class main HEAD;
+classDef HEAD font-weight:bolder,fill:#fdf
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diverging-history-Merge-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Result of a 3-way merge
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="working-with-a-remote" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-a-remote">Working with a Remote</h3>
+<p>For now, you only have a local project. This step will explain how to <code>push</code> your project to a remote repository on GitHub.</p>
+<section id="create-an-empty-repository" class="level4">
+<h4 class="anchored" data-anchor-id="create-an-empty-repository">Create an empty repository</h4>
+<ol type="1">
+<li>Go to github.com</li>
+<li>Create a new <strong>public</strong> repository named <em>username</em>.github.io, where <em>username</em> is your username</li>
+</ol>
+<ul>
+<li>Example: my username is dhmmasson, my repository is dhmmasson.github.io</li>
+<li>The repository should be public</li>
+<li>The repository should be <strong>empty</strong> (do not initialize this repository)</li>
+</ul>
+<ol start="3" type="1">
+<li>Copy the resulting url:</li>
+</ol>
+<ul>
+<li>For the username dhmmasson, the url looks like that: https://github.com/dhmmasson/dhmmasson.github.io.git</li>
+</ul>
+</section>
+<section id="git-push" class="level4">
+<h4 class="anchored" data-anchor-id="git-push">Git Push</h4>
+<ol type="1">
+<li>Go back to smartgit, in your local repository.</li>
+<li>In the menu Remote &gt; Add</li>
+</ol>
+</section>
+<section id="git-token" class="level4">
+<h4 class="anchored" data-anchor-id="git-token">Git Token</h4>
+<p>GitHub prevents you from using a simple login/password workflow. You need to create a specific <code>access token</code></p>
+<ol type="1">
+<li>On GitHub, go to settings (by clicking on your profile picture)</li>
+<li>Go to <code>developer settings</code> (left menu, very bottom)</li>
+<li>Click on <code>personal access token</code></li>
+<li>Click on generate a token (with a meaningful name). <strong>Warning</strong>: Make sure to check all permission(s) you want to grant!</li>
+<li>Copy your token as you will need it during the next step. Careful, once you leave the page, the token won’t be visible anymore. (But don’t worry, you can perform these few steps again if necessary).</li>
+</ol>
+</section>
+<section id="cloning" class="level4">
+<h4 class="anchored" data-anchor-id="cloning">Cloning</h4>
+<ol type="1">
+<li>Commit and push all your change.
+<ul>
+<li>If SmartGit asks for the login/password, use your access token (previous step) instead of your password.</li>
+<li>Click <code>save credentials</code> to make sure you do not have to worry about it anymore!</li>
+</ul></li>
+<li>Visit the repository on github (https://github.com/<username>/<username>.github.io)</username></username></li>
+<li><strong>Delete your local repository</strong></li>
+<li>Clone the project back from github</li>
+</ol>
+</section>
+</section>
+<section id="finishing-up" class="level3">
+<h3 class="anchored" data-anchor-id="finishing-up">Finishing up</h3>
+<section id="readme" class="level4">
+<h4 class="anchored" data-anchor-id="readme">README</h4>
+<p>All repository should contains a README file. A README is a text file that introduces and explains a project. It contains information that is commonly required to understand what the project is about. It should explain how to install, use or contribute to your project.</p>
+<p>It should be the first file you create on a project as it will give you the habit of documenting your projects. READMEs are usually written in a format called <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">markdown</a> that allows you to easily write formatted text with a text editor.</p>
+<p>Today, we will use it to mark what we have to do for this activity.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># My page</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>This is my home page</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Create the file Readme with .md extension.</p>
+</section>
+</section>
+</section>
+<section id="collaborative-work" class="level2">
+<h2 class="anchored" data-anchor-id="collaborative-work">Collaborative work</h2>
+<p>Git and Github are great to work on collaborative works, in this activity you will create a website in groups of two, first alternating modifying the documents and then working concurrently:</p>
+<section id="create-a-shared-repository" class="level3">
+<h3 class="anchored" data-anchor-id="create-a-shared-repository">Create a shared repository</h3>
+<ol type="1">
+<li>Create a repository</li>
+</ol>
+<ul>
+<li>Create <strong>ONE</strong> new repository on Github, you can initialize it with a Readme and a License (e.g.&nbsp;MIT)</li>
+<li>In Settings &gt; Access &gt; Add the other member of the group as an admin of the repository</li>
+</ul>
+<ol start="2" type="1">
+<li>Clone the repository (Both members)</li>
+</ol>
+</section>
+<section id="contribute-to-the-project" class="level3">
+<h3 class="anchored" data-anchor-id="contribute-to-the-project">Contribute to the project</h3>
+<ol start="3" type="1">
+<li>Repeat the step of the single-user projects</li>
+</ol>
+<ul>
+<li>One member creates an index.html, <strong>stages</strong>, <strong>commits</strong> and <strong>pushes</strong> his modification on the remote repository</li>
+<li>The other members pull the modification and add a paragraph <strong>stages</strong>, <strong>commits</strong> and <strong>pushes</strong> his modification on the remote repository</li>
+<li>Repeat several times (adding paragraph, CSS …), before editing the files at same times. Commits and push as often as possible.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../activities/setup/Git_Clients.html" class="pagination-link" aria-label="Git Clients">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Git Clients</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../activities/local-history.html" class="pagination-link" aria-label="Start from scratch">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Start from scratch</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
