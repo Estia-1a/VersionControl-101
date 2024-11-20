@@ -1,14 +1,54 @@
 ---
 title: "Version Control 101"
 listing: 
-  contents: activities/**/*.(qmd|md)
+  contents: activities
 ---
 # Welcome to the Version Control 101
 You will find here all the information relative to the class *Systèmes de Gestion de Version*
 
-You can use the issues système to ask questions 
-## The class
+## Learning Outcomes
 
-## The Evaluation
-Les lapins crétins disent bwaaah!
+By the end of this course, students will be able to:
+
+1. **Understand the Basics of Version Control**  
+   - Explain the purpose and benefits of version control systems (VCS).  
+   - Distinguish between centralized and distributed version control systems.  
+
+2. **Set Up and Use a Version Control Environment**  
+   - Install and configure a Git Client.
+   - Create and initialize repositories for project management.  
+   - Execute essential commands such as Stage, commit, pull, push, and clone.  
+
+4. **Collaborate Using Version Control**  
+   - Create and manage branches for parallel development.  
+   - Merge branches and resolve conflicts in a collaborative environment.  
+
+5. **Implement Best Practices in Version Management**  
+   - Write clear and concise commit messages.  
+   - Organize repository structures for scalable project management.  
+
+## Schedule 
+
+- **Session 1** : Introduction to Git and Github 
+  - *Class* (1h30):  Introduction to Git Concepts
+  - *Activity* (2h30):
+    - [Create a Github account](activities/setup/Github_Account_Creation.qmd)
+    - [Set up a Git Client](activities/setup/Git_Clients.qmd)
+    - Create your first local Project
+    - Publish your project to a remote repository (Github)
+    - Clone a project from Github
+- **Session 2** : Web Development Project
+  - *Project* (4h):
+    - Join your team using Github Classroom (link in moodle)
+    - Code and Commits 
+- **Session 3** : Web Development Project and Quizz
+  - *Project* (3h30):
+    - Code and Commits 
+  - *Evaluation (15min)* 
+    - Quizz on Moodle
+    - Automatic Evaluation of the project on Github
+  
+
+You can use the issues système to ask questions 
+
 
