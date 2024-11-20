@@ -6,20 +6,34 @@ book:
   author: "Dimitri Masson"
   date: "14/11/2024"
   chapters:
+    
     - part: "Introduction"
       chapters:
         - index.qmd
         - evaluation.qmd
+
     - part: "Setting Up"
       chapters: 
-        - activities/class_1/Git_Clients.qmd
-        - activities/class_1/Github_Account_Creation.qmd
-    - part: "Activity"
+        - activities/setup/Github_Account_Creation.qmd
+        - activities/setup/Git_Clients.qmd
+        
+    - part: activities/class_1/Single-User-Project.qmd
       chapters: 
-        - activities/Single-User-Project.qmd
-    - part: "Project"
+        - activities/class_1/local-history.qmd
+        - activities/class_1/remote-history.qmd
+
+    - part: "Multi-User Project"
+      chapters: 
+        - activities/class_1/collaborative-project.qmd
+
+    - part: "Development Web Project"
       chapters: 
         - activities/Multi-User-Projet.md
+
+number-depth: 3
+fig-cap-location: bottom
+lst-cap-location: bottom
+
 
 website:
   title: "wiki"
