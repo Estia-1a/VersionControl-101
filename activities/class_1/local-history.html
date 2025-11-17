@@ -460,8 +460,8 @@ Important
 <div aria-describedby="fig-linear-history-skeleton-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-skeleton">flowchart BT
-   Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-   A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
+   Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+   A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
 </pre>
 </div>
 </div>
@@ -487,12 +487,12 @@ Figure&nbsp;5.1: The commit graph of the project after adding the basic HTML ske
 <div aria-describedby="fig-linear-history-regular-commit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-regular-commit">flowchart BT
-  Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-  A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-  B --&gt; C(Personal Info)
-  C --&gt; D(Formation)
-  D --&gt; E(Experience)
-  E --&gt; F(Miscellanous)
+  Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+  A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+  B --&gt; C(feat: add Personal Info)
+  C --&gt; D(feat: add Formation)
+  D --&gt; E(feat: add Experience)
+  E --&gt; F(feat: add Miscellanous)
 </pre>
 </div>
 </div>
@@ -518,12 +518,12 @@ Figure&nbsp;5.2: Linear history of the project after adding some content
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-branch">flowchart LR
   subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
   %% F --&gt; G(Empty CSS)
   %% G --&gt; H(Basic CSS)
   end
@@ -557,12 +557,12 @@ Figure&nbsp;5.3: Commit graph with the main branch, the star indicate the HEAD
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-two-branches">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
     %% F --&gt; G(Empty CSS)
     %% G --&gt; H(Basic CSS)
     end
@@ -596,14 +596,14 @@ Figure&nbsp;5.4: Commit graph with two branches main and css pointing the same c
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-skeleton">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
-    F --&gt; G(Empty CSS)
-    G --&gt; H(Basic CSS)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
+    F --&gt; G(build: Create Empty CSS)
+    G --&gt; H(feat: add basic CSS)
     end
     subgraph branches
         main&gt;Main*] ==&gt; F
@@ -637,14 +637,14 @@ Figure&nbsp;5.5: CSS branch is two commits in advance
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-fastforward">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
-    F --&gt; G(Empty CSS)
-    G --&gt; H(Basic CSS)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
+    F --&gt; G(build: Create Empty CSS)
+    G --&gt; H(feat: add basic CSS)
     end
     subgraph branches
         main&gt;Main*] ==&gt; H
@@ -688,15 +688,15 @@ Figure&nbsp;5.6: Css was ahead from main it should result in a fastforward
 <pre class="mermaid mermaid-js" data-label="fig-linear-history-css-advance">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
-    F --&gt; G(Empty CSS)
-    G --&gt; H(Basic CSS)
-    H --&gt; I(Modified CSS)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
+    F --&gt; G(build: Create Empty CSS)
+    G --&gt; H(feat: add basic CSS)
+    H --&gt; I(feat: color the title in green)
 
     end
     subgraph branches
@@ -737,16 +737,16 @@ Figure&nbsp;5.7: CSS branch is one commit in advance
 <pre class="mermaid mermaid-js" data-label="fig-diverging-history">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
-    F --&gt; G(Empty CSS)
-    G --&gt; H(Basic CSS)
-    H --&gt; I(Modified CSS)
-    H --&gt; J(Another modified CSS)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
+    F --&gt; G(build: create Empty CSS)
+    G --&gt; H(feat: add basic CSS)
+    H --&gt; I(feat: color the title in green)
+    H --&gt; J(feat: color the paragraph in red)
 
     end
     subgraph branches
@@ -780,17 +780,17 @@ Figure&nbsp;5.8: Main branch and CSS branch evolved at the same time
 <pre class="mermaid mermaid-js" data-label="fig-diverging-history-Merge">flowchart LR
     subgraph commits
     direction BT 
-    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;Empty Page&lt;br&gt;Just an empty index.html)
-    A --&gt; B(c0f3ee&lt;br&gt;Skeleton&lt;br&gt;Added some basic html structure to the html document)
-    B --&gt; C(Personal Info)
-    C --&gt; D(Formation)
-    D --&gt; E(Experience)
-    E --&gt; F(Miscellanous)
-    F --&gt; G(Empty CSS)
-    G --&gt; H(Basic CSS)
-    H --&gt; I(Modified CSS)
-    H --&gt; J(Another modified CSS)
-    I --&gt; K(New CSS)
+    Init(56fa61&lt;br&gt;Initial commit) --&gt; A(819ab1&lt;br&gt;feat: add an empty page&lt;br&gt;Just an empty index.html)
+    A --&gt; B(c0f3ee&lt;br&gt;feat: add Skeleton&lt;br&gt;Added some basic html structure to the html document)
+    B --&gt; C(feat: add Personal Info)
+    C --&gt; D(feat: add Formation)
+    D --&gt; E(feat: add Experience)
+    E --&gt; F(feat: add Miscellanous)
+    F --&gt; G(build: Create Empty CSS)
+    G --&gt; H(feat: add basic CSS)
+    H --&gt; I(feat: color the title in green)
+    H --&gt; J(feat: color the paragraph in red)
+    I --&gt; K(feat: Create a new CSS)
     J --&gt; K
 
     end
