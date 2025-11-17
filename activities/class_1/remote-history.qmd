@@ -23,13 +23,8 @@ This step will explain how to `push` your project to a remote repository on GitH
 
 ## Git Token
 
-GitHub prevents you from using a simple login/password workflow. You need to create a specific `access token`
+If you haven't already, you need to create a token to push your project to github. [Create a token](/activities/setup/Git_Clients.qmd#create-a-token)
 
-1. On GitHub, go to settings (by clicking on your profile picture)
-2. Go to `developer settings` (left menu, very bottom)
-3. Click on `personal access token`
-4. Click on generate a token (with a meaningful name). **Warning**: Make sure to check all permission(s) you want to grant!
-5. Copy your token as you will need it during the next step. Careful, once you leave the page, the token won't be visible anymore. (But don't worry, you can perform these few steps again if necessary).
 
 ## Cloning
 

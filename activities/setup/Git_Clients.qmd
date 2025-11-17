@@ -28,6 +28,20 @@ If you are already using a specific git client, you can continue using this one.
 
 [![Video explaining how to install smartgit](/ressources/tutoSmartGit.m4v)
 
+##### Create a Token
+
+GitHub prevents you from using a simple login/password workflow.
+
+1. In smartgit, in the menu **Edit > Preferences **
+2. In the Preference window open the tab (on the left): **Hosting Provider**
+3. Click the **button Add** (right side) > Github
+4. Click the **button Generate API Token** 
+5. *We recommend not setting a master password* if you do use a password you will remember
+5. It should open a web page (if the page doesn't show up, explore your browser)
+6. If you are not automatically connected to github : **Log in** with your account 
+7. **Authorize** Synthevo / Smartgit to access github
+8. Go back to smartgit the token input should be full of ●●●●, Click the **add button**
+
 ## Github Desktop 
 
 Something Else
