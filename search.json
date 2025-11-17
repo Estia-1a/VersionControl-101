@@ -1,60 +1,5 @@
 [
   {
-    "objectID": "activities/Multi-User-Projet.html",
-    "href": "activities/Multi-User-Projet.html",
-    "title": "8  Web development Project",
-    "section": "",
-    "text": "9 Project",
-    "crumbs": [
-      "Development Web Project",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
-    ]
-  },
-  {
-    "objectID": "activities/Multi-User-Projet.html#context",
-    "href": "activities/Multi-User-Projet.html#context",
-    "title": "8  Web development Project",
-    "section": "9.1 Context",
-    "text": "9.1 Context\n\n9.1.1 Rules :\n\nTeam of 3/4\nThe Guide can have several pages but should have one index file that serves at the entry point. https://estia-1a.github.io/VersionControl-101/evaluation.html#project-evaluation-criteria",
-    "crumbs": [
-      "Development Web Project",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
-    ]
-  },
-  {
-    "objectID": "activities/Multi-User-Projet.html#pedagogical-objectives",
-    "href": "activities/Multi-User-Projet.html#pedagogical-objectives",
-    "title": "8  Web development Project",
-    "section": "9.2 Pedagogical Objectives",
-    "text": "9.2 Pedagogical Objectives\n\nLearn by doing : Explore concepts and tools provided to you and try to use them in this project.\nTeam based Project : Create and manage a small project as a team, use tools provided by github to help you.\nLearn about advanced concepts in git and github that help you manage your project.",
-    "crumbs": [
-      "Development Web Project",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
-    ]
-  },
-  {
-    "objectID": "activities/Multi-User-Projet.html#subject",
-    "href": "activities/Multi-User-Projet.html#subject",
-    "title": "8  Web development Project",
-    "section": "9.3 Subject",
-    "text": "9.3 Subject\nCreate the website following the instructions on the Developpement Web course.\n\nVous êtes ingénieur consultant dans la société internationale « Shinra ». Votre responsable vous confie, à vous et votre équipe, une mission pour un appel d’offre chez un client qui souhaite développer ses services dans plusieurs domaines. Pour cela, vous allez, en équipe, devoir proposer une version minimale d’un site web lié au secteur d’activité que vous avez choisi (entertainment, voyage, grande distribution, solidarité, ou culture). Si ces versions minimales sont satisfaisantes, alors votre société remportera l’appel d’offre, et votre équipe recevra une prime.\nLe client vous fournit les maquettes5 qu’il vous faut implémenter en HTML5 et CSS3. Le cahier des charges stipule clairement que la recette doit comprendre des sites web réactifs (responsive design) puisque le client testera les sites sur ordinateur mais aussi sur smartphone. De plus, toutes les pages HTML ainsi que les feuilles de style CSS doivent être valides6 selon le World Wide Web Consortium (W3C). Chaque site web devra comporter au minimum 2 pages pour avoir un aperçu de ce que vous proposez : une page d’accueil, et une page en rapport avec le panier et/ou sa validation. Pour le moment, vous êtes libre du contenu (e.g., offres et produits sur le site) et pouvez simplement simuler ce que le panier comportera. Enfin, pour faciliter la validation finale, votre proposition de site web devra être déployée via FTP sur un serveur distant afin d’être accessible en ligne via http://devweb.estia.fr/web1a//project. Répondre au cahier des charges et aux demandes du client est une condition nécessaire pour remporter le contrat (i.e., ne pas avoir F). Votre responsable vous informe qu’il a des attentes particulières en plus pour mettre toutes les chances de votre côté :\n\nTous les liens que vous mettez sur votre site doivent être fonctionnels. Les liens qui mèneraient à des pages web ou bien des éléments non inclus dans cette version minimale du &gt; site doivent aller vers une page temporaire (avec HTML et CSS valides) indiquant « en cours de construction ».\nDe plus, votre responsable vous fait confiance pour que les pages web soient esthétiques avec un style professionnel.\nEnfin, il faut que votre site web respecte les critères d’accessibilité selon les standards « Techniques and Failures for Web Content Accessibility Guidelines 2.0 » (WCAG 2.0)7 .\nVotre responsable vous donne l’autorisation d’utiliser des librairies particulières. Le service informatique de votre entreprise vous fait part des habitudes de programmation &gt; existantes en ce qui concerne les pages web, et qu’il faut respecter lors du déploiement du site :\nLe code HTML doit exploiter une feuille de style séparée, et ne contenir directement aucune directive de style.\nVotre site devrait considérer des valeurs d’éco-conception, et notamment « écoconception web : les 115 bonnes pratiques », en suivant les recommandations officielles listées sur GitHub https://github.com/cnumr/best-practices. Pour chaque recommandation suivie, le service informatique vous invite à compléter le fichier greenit.html (cf. Moodle) et le mettre à la racine de votre répertoire /. Vous pouvez appliquer du style à ce fichier, mais en aucun cas modifier la structure de la table (id « main_table »), à part pour ajouter des lignes bien entendu",
-    "crumbs": [
-      "Development Web Project",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
-    ]
-  },
-  {
-    "objectID": "activities/Multi-User-Projet.html#advice-for-this-assignment",
-    "href": "activities/Multi-User-Projet.html#advice-for-this-assignment",
-    "title": "8  Web development Project",
-    "section": "9.4 Advice for this assignment",
-    "text": "9.4 Advice for this assignment\n\n9.4.1 Example of a Planning\nThis is a group project:\n\nYou should have group activity, to manage your team, share your work, learn from the other…\nYou should have individual activity: work on the html, css, the images… commit your work, pull the modifications from the other and push yours to github.\nGithub has a lot of tools to help you manage your project, discover them quickly to use them in your project.\n\nHere is an example of a planning you could follow during the first 4h of this project. Feel free to modify to better suit your needs.\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n5min\nGroup Activity : Create team  Individual Activity : Follow the link on moodle to register your account on classroom.github.com\n\n\n15min\nGroup Activity : Organize your team\n\n\n15min\nIndividual Activity : Prepare your environment (VScode)\n\n\n15min\nGroup Activity : Organize your team: Divide the work among the team members\n\n\n60min\nIndividual Activity : Work on your assigned page/style\n\n\n15min\nGroup Activity : Push and Pull the modification, merge them\n\n\n15min\nGroup Activity : Organize your team: Divide the remaining work among the team members, select a new strategy\n\n\n60min\nIndividual Activity : Work on your assigned page/style\n\n\n15min\nGroup Activity : Push and Pull the modification, merge them\n\n\n30min\nGroup Activity : Final Debriefing\n\n\n\n\n\n9.4.2 How to Start\n\nFollow the link on moodle to create your team (find your name in the pdf file, create a new team or join an existing team)\nAll the group members clone the repository created for your team. \nOne member of the group\n\nchange the title of the website,\nsave the index.html\nstage index.html\ncommit (“feat: add the name of our site”)\npush the commit to github.\n\nAll the other group members pull the modified HTML and check that the title has been changed.\nAll group members work on their assigned tasks: don’t forget to commit regularly !\nWhen a group member is satisfied with the work done and want to share with the other ones, they push their changes. During this step, you may have to manage conflicts. Check difference (diff) with master and merge. Check your course or call the teacher if there are any problems.",
-    "crumbs": [
-      "Development Web Project",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
-    ]
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "SGV 101",
@@ -92,7 +37,7 @@
     "href": "evaluation.html",
     "title": "2  Evaluation",
     "section": "",
-    "text": "2.1 Quizz Criteria",
+    "text": "2.1 Quizz Criteria\nThe evaluation for the SGV part will focus on the project’s version management:\nTo Pass the module you must : - Pass the Quizz on the 3rd session - Have used git / github for the web project",
     "crumbs": [
       "Introduction",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Evaluation</span>"
@@ -136,7 +81,7 @@
     "href": "activities/setup/Git_Clients.html",
     "title": "4  Git Clients",
     "section": "",
-    "text": "4.1 Client Installation",
+    "text": "4.1 Client Installation\nThere exist many git clients from the basic command line, to graphical client",
     "crumbs": [
       "Setting Up",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git Clients</span>"
@@ -147,10 +92,30 @@
     "href": "activities/setup/Git_Clients.html#client-installation",
     "title": "4  Git Clients",
     "section": "",
-    "text": "Smart Git InstallationGithub Desktop\n\n\nIf you are already using a specific git client, you can continue using this one. Otherwise, we invite you to use Smartgit.\n\nInstructions\n\nLicense: download the license file from moodle: https://ingenieurs.estia.fr/pluginfile.php/20501/mod_folder/content/0/syntevo%20Non-Commercial%20License.lic?forcedownload=1\nStart: launch the application smartgit from your search bar\nUser Info:\n\nUser Name will be used to sign your commits: Copy your github handle (the name of your github account)\nEmail address Use the email address of your [github account]. Use the private address provided by github (https://github.com/settings/emails)\n\nssh client: Use smartGit as SSH client\nStyle: Commits (Log History)\nPrivacy: Choose what you want to send.\n\n[Video explaining how to install smartgit\n\n\n\nSomething Else",
+    "text": "Smart Git InstallationGithub Desktop\n\n\nIf you are already using a specific git client, you can continue using this one. Otherwise, we invite you to use Smartgit.\n\nInstructions\n\nLicense: select “on-premise license server” -&gt; copy the following url : https://devweb.estia.fr/smartgit/\nStart: launch the application smartgit from your search bar\nUser Info:\n\nUser Name will be used to sign your commits: Copy your github handle (the name of your github account)\nEmail address Use the email address of your [github account]. Use the private address provided by github (https://github.com/settings/emails)\n\nssh client: Use smartGit as SSH client\nStyle: Commits (Log History)\nPrivacy: Choose what you want to send.\n\n[Video explaining how to install smartgit\n\nCreate a Token\nGitHub prevents you from using a simple login/password workflow.\n\nIn smartgit, in the menu Edit &gt; Preferences \nIn the Preference window open the tab (on the left): Hosting Provider\nClick the button Add (right side) &gt; Github\nClick the button Generate API Token\nWe recommend not setting a master password if you do use a password you will remember\nIt should open a web page (if the page doesn’t show up, explore your browser)\nIf you are not automatically connected to github : Log in with your account\nAuthorize Synthevo / Smartgit to access github\nGo back to smartgit the token input should be full of ●●●●, Click the add button\n\n\n\n\n\nSomething Else",
     "crumbs": [
       "Setting Up",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Git Clients</span>"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/Single-User-Project.html",
+    "href": "activities/class_1/Single-User-Project.html",
+    "title": "Single User Repository",
+    "section": "",
+    "text": "First Project - your GitHub page\nYour first project will be to create your personal page on GitHub. We invite you to create your public profile, you are free to select the content and the design your page as you wish. However, this page will be public, and you are producing it in the context of a class.\nStay classy",
+    "crumbs": [
+      "Single User Repository"
+    ]
+  },
+  {
+    "objectID": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
+    "href": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
+    "title": "Single User Repository",
+    "section": "",
+    "text": "Activities Objectives\nThe aim of the project is to try hands-on the concepts seen in class:\n\nStaging modifications\nCreating Commits\nCreating Branches\nMerging Branches\n\n\n\nOverview\n\nYou will start locally by iteratively modifying your page: the goal is to make small changes and commits regularly to handle the concepts, not creating the page in one go.\nYou will then work with a remote repository on GitHub. This repository will have a specific name if you want it to work as your public page.",
+    "crumbs": [
+      "Single User Repository"
     ]
   },
   {
@@ -158,7 +123,7 @@
     "href": "activities/class_1/local-history.html",
     "title": "5  Local History",
     "section": "",
-    "text": "5.1 Create a folder and initialize a git repository",
+    "text": "5.1 Create a folder and initialize a git repository\nYou will create a folder on your computer, initialize a git repository, add an HTML file, and start committing changes.",
     "crumbs": [
       "Single User Repository",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Local History</span>"
@@ -224,7 +189,7 @@
     "href": "activities/class_1/remote-history.html",
     "title": "6  Working with a Remote",
     "section": "",
-    "text": "6.1 Create an empty repository",
+    "text": "6.1 Create an empty repository\nFor now, you only have a local project. This step will explain how to push your project to a remote repository on GitHub.",
     "crumbs": [
       "Single User Repository",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
@@ -257,7 +222,7 @@
     "href": "activities/class_1/remote-history.html#git-token",
     "title": "6  Working with a Remote",
     "section": "6.3 Git Token",
-    "text": "6.3 Git Token\nGitHub prevents you from using a simple login/password workflow. You need to create a specific access token\n\nOn GitHub, go to settings (by clicking on your profile picture)\nGo to developer settings (left menu, very bottom)\nClick on personal access token\nClick on generate a token (with a meaningful name). Warning: Make sure to check all permission(s) you want to grant!\nCopy your token as you will need it during the next step. Careful, once you leave the page, the token won’t be visible anymore. (But don’t worry, you can perform these few steps again if necessary).",
+    "text": "6.3 Git Token\nIf you haven’t already, you need to create a token to push your project to github. Create a token",
     "crumbs": [
       "Single User Repository",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Working with a Remote</span>"
@@ -290,7 +255,7 @@
     "href": "activities/class_1/collaborative-project.html",
     "title": "7  Collaborative work",
     "section": "",
-    "text": "7.1 Create a shared repository",
+    "text": "7.1 Create a shared repository\nGit and Github are great to work on collaborative works, in this activity you will create a website in groups of two, first alternating modifying the documents and then working concurrently:",
     "crumbs": [
       "Multi-User Project",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Collaborative work</span>"
@@ -319,23 +284,58 @@
     ]
   },
   {
-    "objectID": "activities/class_1/Single-User-Project.html",
-    "href": "activities/class_1/Single-User-Project.html",
-    "title": "Single User Repository",
+    "objectID": "activities/Multi-User-Projet.html",
+    "href": "activities/Multi-User-Projet.html",
+    "title": "8  Web development Project",
     "section": "",
-    "text": "First Project - your GitHub page\nYour first project will be to create your personal page on GitHub. We invite you to create your public profile, you are free to select the content and the design your page as you wish. However, this page will be public, and you are producing it in the context of a class.\nStay classy",
+    "text": "9 Project",
     "crumbs": [
-      "Single User Repository"
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
     ]
   },
   {
-    "objectID": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
-    "href": "activities/class_1/Single-User-Project.html#first-project---your-github-page",
-    "title": "Single User Repository",
-    "section": "",
-    "text": "Activities Objectives\nThe aim of the project is to try hands-on the concepts seen in class:\n\nStaging modifications\nCreating Commits\nCreating Branches\nMerging Branches\n\n\n\nOverview\n\nYou will start locally by iteratively modifying your page: the goal is to make small changes and commits regularly to handle the concepts, not creating the page in one go.\nYou will then work with a remote repository on GitHub. This repository will have a specific name if you want it to work as your public page.",
+    "objectID": "activities/Multi-User-Projet.html#context",
+    "href": "activities/Multi-User-Projet.html#context",
+    "title": "8  Web development Project",
+    "section": "9.1 Context",
+    "text": "9.1 Context\n\n9.1.1 Rules :\n\nTeam of 3/4\nThe Guide can have several pages but should have one index file that serves at the entry point. https://estia-1a.github.io/VersionControl-101/evaluation.html#project-evaluation-criteria",
     "crumbs": [
-      "Single User Repository"
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#pedagogical-objectives",
+    "href": "activities/Multi-User-Projet.html#pedagogical-objectives",
+    "title": "8  Web development Project",
+    "section": "9.2 Pedagogical Objectives",
+    "text": "9.2 Pedagogical Objectives\n\nLearn by doing : Explore concepts and tools provided to you and try to use them in this project.\nTeam based Project : Create and manage a small project as a team, use tools provided by github to help you.\nLearn about advanced concepts in git and github that help you manage your project.",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#subject",
+    "href": "activities/Multi-User-Projet.html#subject",
+    "title": "8  Web development Project",
+    "section": "9.3 Subject",
+    "text": "9.3 Subject\nCreate the website following the instructions on the Developpement Web course.\n\nVous êtes ingénieur consultant dans la société internationale « Shinra ». Votre responsable vous confie, à vous et votre équipe, une mission pour un appel d’offre chez un client qui souhaite développer ses services dans plusieurs domaines. Pour cela, vous allez, en équipe, devoir proposer une version minimale d’un site web lié au secteur d’activité que vous avez choisi (entertainment, voyage, grande distribution, solidarité, ou culture). Si ces versions minimales sont satisfaisantes, alors votre société remportera l’appel d’offre, et votre équipe recevra une prime.\nLe client vous fournit les maquettes5 qu’il vous faut implémenter en HTML5 et CSS3. Le cahier des charges stipule clairement que la recette doit comprendre des sites web réactifs (responsive design) puisque le client testera les sites sur ordinateur mais aussi sur smartphone. De plus, toutes les pages HTML ainsi que les feuilles de style CSS doivent être valides6 selon le World Wide Web Consortium (W3C). Chaque site web devra comporter au minimum 2 pages pour avoir un aperçu de ce que vous proposez : une page d’accueil, et une page en rapport avec le panier et/ou sa validation. Pour le moment, vous êtes libre du contenu (e.g., offres et produits sur le site) et pouvez simplement simuler ce que le panier comportera. Enfin, pour faciliter la validation finale, votre proposition de site web devra être déployée via FTP sur un serveur distant afin d’être accessible en ligne via http://devweb.estia.fr/web1a//project. Répondre au cahier des charges et aux demandes du client est une condition nécessaire pour remporter le contrat (i.e., ne pas avoir F). Votre responsable vous informe qu’il a des attentes particulières en plus pour mettre toutes les chances de votre côté :\n\nTous les liens que vous mettez sur votre site doivent être fonctionnels. Les liens qui mèneraient à des pages web ou bien des éléments non inclus dans cette version minimale du &gt; site doivent aller vers une page temporaire (avec HTML et CSS valides) indiquant « en cours de construction ».\nDe plus, votre responsable vous fait confiance pour que les pages web soient esthétiques avec un style professionnel.\nEnfin, il faut que votre site web respecte les critères d’accessibilité selon les standards « Techniques and Failures for Web Content Accessibility Guidelines 2.0 » (WCAG 2.0)7 .\nVotre responsable vous donne l’autorisation d’utiliser des librairies particulières. Le service informatique de votre entreprise vous fait part des habitudes de programmation &gt; existantes en ce qui concerne les pages web, et qu’il faut respecter lors du déploiement du site :\nLe code HTML doit exploiter une feuille de style séparée, et ne contenir directement aucune directive de style.\nVotre site devrait considérer des valeurs d’éco-conception, et notamment « écoconception web : les 115 bonnes pratiques », en suivant les recommandations officielles listées sur GitHub https://github.com/cnumr/best-practices. Pour chaque recommandation suivie, le service informatique vous invite à compléter le fichier greenit.html (cf. Moodle) et le mettre à la racine de votre répertoire /. Vous pouvez appliquer du style à ce fichier, mais en aucun cas modifier la structure de la table (id « main_table »), à part pour ajouter des lignes bien entendu",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
+    ]
+  },
+  {
+    "objectID": "activities/Multi-User-Projet.html#advice-for-this-assignment",
+    "href": "activities/Multi-User-Projet.html#advice-for-this-assignment",
+    "title": "8  Web development Project",
+    "section": "9.4 Advice for this assignment",
+    "text": "9.4 Advice for this assignment\n\n9.4.1 Example of a Planning\nThis is a group project:\n\nYou should have group activity, to manage your team, share your work, learn from the other…\nYou should have individual activity: work on the html, css, the images… commit your work, pull the modifications from the other and push yours to github.\nGithub has a lot of tools to help you manage your project, discover them quickly to use them in your project.\n\nHere is an example of a planning you could follow during the first 4h of this project. Feel free to modify to better suit your needs.\n\n\n\n\n\n\n\nTime\nActivity\n\n\n\n\n5min\nGroup Activity : Create team  Individual Activity : Follow the link on moodle to register your account on classroom.github.com\n\n\n15min\nGroup Activity : Organize your team\n\n\n15min\nIndividual Activity : Prepare your environment (VScode)\n\n\n15min\nGroup Activity : Organize your team: Divide the work among the team members\n\n\n60min\nIndividual Activity : Work on your assigned page/style\n\n\n15min\nGroup Activity : Push and Pull the modification, merge them\n\n\n15min\nGroup Activity : Organize your team: Divide the remaining work among the team members, select a new strategy\n\n\n60min\nIndividual Activity : Work on your assigned page/style\n\n\n15min\nGroup Activity : Push and Pull the modification, merge them\n\n\n30min\nGroup Activity : Final Debriefing\n\n\n\n\n\n9.4.2 How to Start\n\nFollow the link on moodle to create your team (find your name in the pdf file, create a new team or join an existing team)\nAll the group members clone the repository created for your team. \nOne member of the group\n\nchange the title of the website,\nsave the index.html\nstage index.html\ncommit (“feat: add the name of our site”)\npush the commit to github.\n\nAll the other group members pull the modified HTML and check that the title has been changed.\nAll group members work on their assigned tasks: don’t forget to commit regularly !\nWhen a group member is satisfied with the work done and want to share with the other ones, they push their changes. During this step, you may have to manage conflicts. Check difference (diff) with master and merge. Check your course or call the teacher if there are any problems.",
+    "crumbs": [
+      "Development Web Project",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Web development Project</span>"
     ]
   }
 ]
