@@ -17,7 +17,7 @@ If you are already using a specific git client, you can continue using this one.
 
 #### Instructions
 
-1.  **License**: download the license file from moodle: https://ingenieurs.estia.fr/pluginfile.php/20501/mod_folder/content/0/syntevo%20Non-Commercial%20License.lic?forcedownload=1
+1.  **License**: select "on-premise license server" -> copy the following url : ```https://devweb.estia.fr/smartgit/```
 2.  **Start**: launch the application smartgit from your search bar
 3.  **User Info:**
     - _User Name_ will be used to sign your commits: Copy your github handle (the name of your github account)
