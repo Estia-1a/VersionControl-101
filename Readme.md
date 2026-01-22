@@ -1,5 +1,5 @@
 # My page
-This will be my home page
+This is a readme
 
 ## ToDo list
 - [ ] 1. README
